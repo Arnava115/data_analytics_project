@@ -1,0 +1,35 @@
+# City Pulse pipeline config. KPI formulas live in src/metrics.py and docs/metrics.md.
+
+source: nyc_tlc_hvfhs
+months: 2
+platforms:
+  HV0003: Uber
+  HV0005: Lyft
+
+airports:
+  1: EWR
+  132: JFK
+  138: LGA
+
+junk:
+  min_location_id: 1
+  max_location_id: 263
+  max_trip_miles: 150
+  max_trip_seconds: 18000
+  max_wait_seconds: 7200
+  max_passenger_fare: 1000
+
+insights:
+  take_rate_drop_bps: 50
+  airport_share_jump_pp: 2.0
+  volume_up_pct: 10.0
+  trip_time_up_pct: 10.0
+  pay_per_hour_drop_pct: 5.0
+  wait_up_pct: 15.0
+  min_zone_trips_for_congestion: 800
+
+keep_raw: false
+
+duckdb:
+  memory_limit: 4GB
+  threads: 4

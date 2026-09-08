@@ -1,0 +1,25 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.mypy_cache/
+.ruff_cache/
+
+# Local warehouse and bulky TLC extracts
+data/raw/*
+!data/raw/.gitkeep
+data/warehouse/*
+!data/warehouse/.gitkeep
+!data/warehouse/city_pulse.duckdb
+data/reference/*
+!data/reference/.gitkeep
+!data/reference/taxi_zone_lookup.csv
+!data/reference/taxi_zones.geojson
+*.duckdb
+!data/warehouse/city_pulse.duckdb
+*.duckdb.wal
+
+# Streamlit
+.streamlit/secrets.toml
